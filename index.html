@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إتقان الإنجليزية مع قيس الجازي</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            direction: rtl; /* For Arabic content */
+            text-align: right; /* For Arabic content */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: sticky; /* Make header sticky */
+            top: 0;
+            z-index: 1000; /* Ensure it stays on top */
+        }
+
+        header h1 {
+            margin: 0;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover,
+        header nav ul li a.active {
+            color: #ffd700; /* Gold for hover/active */
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 40px 0;
+        }
+
+        .home-hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://placehold.co/1920x600/50b2c0/FFFFFF?text=Learning+English') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .home-hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .home-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+        }
+
+        .why-choose-us {
+            background-color: rgba(255,255,255,0.9);
+            color: #333;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+
+        .why-choose-us h3 {
+            color: #4CAF50;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .why-choose-us ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .why-choose-us ul li {
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Icon Styles */
+        .icon-img {
+            width: 28px; /* حجم الأيقونة: يمكنك تعديله حسب الرغبة */
+            height: 28px; /* يجب أن يكون نفس قيمة العرض للحفاظ على التناسب */
+            vertical-align: middle; /* لمحاذاة الأيقونة عمودياً مع النص بجانبها */
+            margin-left: 10px; /* مسافة على يسار الأيقونة للفصل بينها وبين النص (في الاتجاه RTL) */
+            border-radius: 50%; /* لجعل الأيقونة دائرية إذا كانت مربعة */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* ظل خفيف لإضافة عمق */
+            transition: transform 0.3s ease; /* تأثير انتقال عند التحويم */
+        }
+
+        /* تأثير عند التحويم على الأيقونة (اختياري) */
+        .icon-img:hover {
+            transform: scale(1.1); /* تكبير الأيقونة قليلاً عند التحويم */
+        }
+
+        /* نمط خاص للأيقونات داخل قائمة "Why Choose Us" */
+        .why-choose-us ul li .icon-img {
+            margin-left: 15px; /* زيادة المسافة قليلاً هنا */
+            width: 32px; /* حجم أكبر قليلاً */
+            height: 32px;
+        }
+
+        /* نمط خاص للأيقونات داخل معلومات الاتصال */
+        .contact-info p .icon-img {
+            width: 24px;
+            height: 24px;
+            margin-left: 8px;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: #2196F3; /* Blue */
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #1976D2;
+        }
+
+        .btn-secondary {
+            background-color: #FFC107; /* Amber */
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background-color: #FFA000;
+        }
+
+        .btn-success {
+            background-color: #4CAF50; /* Green */
+            color: white;
+        }
+
+        .btn-success:hover {
+            background-color: #43A047;
+        }
+
+        .cta-buttons {
+            margin-top: 50px;
+        }
+
+        /* Chapter Content Styles */
+        .chapter-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-top: 40px; /* Add margin to separate from prev section */
+        }
+
+        .chapter-content h2 {
+            color: #4CAF50;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .chapter-content .intro-text {
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #555;
+        }
+
+        .chapter-navigation {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .chapter-navigation a {
+            background-color: #e0e0e0;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+
+        .chapter-navigation a:hover {
+            background-color: #c0c0c0;
+        }
+
+        .grammar-section {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .grammar-section:last-child {
+            border-bottom: none;
+        }
+
+        .grammar-section h3 {
+            color: #2196F3;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2196F3;
+        }
+
+        .grammar-rule {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .grammar-rule h4 {
+            color: #FF5722; /* Deep Orange */
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .grammar-rule h5 {
+            color: #607D8B; /* Blue Grey */
+            font-size: 1.2rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .grammar-rule ul, .grammar-rule ol {
+            margin-right: 25px; /* For RTL lists */
+            padding: 0;
+            list-style-position: inside;
+        }
+
+        .grammar-rule ul li, .grammar-rule ol li {
+            margin-bottom: 8px;
+        }
+
+        .grammar-rule em {
+            font-style: normal;
+            font-weight: bold;
+            color: #00796B; /* Teal */
+        }
+
+        .grammar-rule code {
+            background-color: #e8eaf6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #3F51B5; /* Indigo */
+        }
+
+        /* Quiz Styles */
+        .quiz-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center; /* Center quiz elements */
+            margin-top: 40px; /* Add margin to separate from prev section */
+        }
+
+        .quiz-container h2 {
+            color: #4CAF50;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .quiz-container .instructions {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        #quiz-area {
+            margin-top: 30px;
+        }
+
+        #question-counter {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        #question-text {
+            font-size: 1.6rem;
+            color: #333;
+            margin-bottom: 30px;
+            min-height: 60px; /* Ensure space for longer questions */
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        .option-label {
+            display: block;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: right; /* For Arabic text */
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .option-label:hover {
+            background-color: #e0e0e0;
+        }
+
+        .option-label input[type="radio"] {
+            margin-left: 10px; /* Space between radio button and text */
+            vertical-align: middle;
+        }
+
+        .option-label.selected {
+            background-color: #d1e7dd; /* Light green */
+            border-color: #4CAF50; /* Green */
+        }
+
+        .option-label.correct {
+            background-color: #d4edda; /* Lighter green for correct */
+            border-color: #28a745; /* Darker green */
+        }
+
+        .option-label.incorrect {
+            background-color: #f8d7da; /* Light red for incorrect */
+            border-color: #dc3545; /* Darker red */
+        }
+
+        .quiz-navigation {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        #results-area {
+            margin-top: 50px;
+            background-color: #f0f8ff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: right;
+        }
+
+        #results-area h3 {
+            color: #2196F3;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        #results-area p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        #answers-review .question-review {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        #answers-review .question-review p {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #444;
+            text-align: right;
+            margin-bottom: 10px;
+        }
+
+        #answers-review .question-review ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #answers-review .question-review ul li {
+            padding: 8px 0;
+            border-top: 1px dotted #eee;
+        }
+
+        #answers-review .question-review ul li:first-child {
+            border-top: none;
+        }
+
+        /* Specific colors for review */
+        #answers-review .question-review .option.user-selected {
+            font-weight: bold;
+        }
+
+        #answers-review .question-review .option.correct-answer {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        #answers-review .question-review .option.incorrect-answer {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        /* Contact Form Styles */
+        .contact-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-top: 40px; /* Add margin to separate from prev section */
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: calc(100% - 20px); /* Adjust for padding */
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            box-sizing: border-box; /* Include padding in width */
+            text-align: right; /* For Arabic input */
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .contact-info {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+
+        .contact-info h3 {
+            color: #4CAF50;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-info p a {
+            color: #2196F3;
+            text-decoration: none;
+        }
+
+        .contact-info p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Basic responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            header nav ul li {
+                margin: 5px 0;
+            }
+            .home-hero h2 {
+                font-size: 2.2rem;
+            }
+            .chapter-navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>إتقان الإنجليزية مع قيس الجازي ن</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">الرئيسية</a></li>
+                    <li><a href="#chapter1">الفصل الأول: أساسيات القواعد</a></li>
+                    <li><a href="#chapter2">الفصل الثاني: قواعد متقدمة</a></li>
+                    <li><a href="#quiz">الاختبار الشامل</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="home-hero">
+            <div class="container">
+                <h2>مرحبًا بك في دليلك الشامل لتعلم قواعد اللغة الإنجليزية!</h2>
+                <p>هل تشعر أحيانًا أن قواعد اللغة الإنجليزية معقدة؟ لا تقلق، هذا الدليل الشامل مصمم خصيصًا لتبسيطها وجعل تعلمها ممتعًا وفعالًا. سواء كنت مبتدئًا أو تسعى لتعزيز فهمك، ستجد هنا كل ما تحتاجه لإتقان أساسيات اللغة الإنجليزية والقواعد المتقدمة.</p>
+                
+                <div class="why-choose-us">
+                    <h3>لماذا تختارنا؟</h3>
+                    <ul>
+                        <li><img src="image.png-937c0c49-32e0-4df6-bbfc-992d263e7a44" alt="شرح مبسط" class="icon-img"> شرح مبسط: نقدم شرحًا واضحًا ومباشرًا بدون تعقيدات.</li>
+                        <li><img src="image.png-4d3a8bc9-23c4-4d1d-b17c-698bd3c0e1d8" alt="أمثلة عملية" class="icon-img"> أمثلة عملية: كل قاعدة مدعومة بأمثلة واقعية لتسهيل الفهم.</li>
+                        <li><img src="image.png-f0d840bf-18c0-4ed3-a222-3b409a3aafae" alt="امتحان شامل" class="icon-img"> امتحان شامل: اختبر معلوماتك بامتحان محوسب يقيم فهمك.</li>
+                        <li><img src="image.png-666a8dca-75db-445f-9061-576fd5c4bfae" alt="محتوى منظم" class="icon-img"> محتوى منظم: القواعد مقسمة إلى فصول لسهولة التصفح.</li>
+                    </ul>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#chapter1" class="btn btn-primary">ابدأ التعلم الآن!</a>
+                    <a href="#quiz" class="btn btn-secondary">اختبر معلوماتك!</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 1: Grammar Essentials -->
+        <section id="chapter1" class="chapter-content">
+            <div class="container">
+                <h2>الفصل الأول: أساسيات القواعد</h2>
+                <p class="intro-text">هنا تبدأ رحلتك! في هذا الفصل، ستتعلم ركائز قواعد اللغة الإنجليزية التي ستمكنك من بناء جمل صحيحة ومعبرة.</p>
+
+                <div class="chapter-navigation">
+                    <a href="#tenses">الأزمنة</a>
+                    <a href="#passive-voice">المبني للمجهول</a>
+                    <a href="#derivatives">المشتقات</a>
+                    <a href="#comparisons">المقارنات</a>
+                    <a href="#causative">السببية</a>
+                    <a href="#used-to">اعتاد على</a>
+                </div>
+
+                <section id="tenses" class="grammar-section">
+                    <h3>1. الأزمنة (Tenses): مفتاح فهم الوقت في الإنجليزية</h3>
+                    <p>فهم الأزمنة هو العمود الفقري للتواصل الفعال. كل زمن له استخداماته وكلماته الدالة التي تساعدك على تحديده.</p>
+
+                    <article class="grammar-rule">
+                        <h4>أ. المضارع البسيط (Present Simple)</h4>
+                        <h5>متى نستخدمه؟</h5>
+                        <ul>
+                            <li>للتعبير عن الحقائق العامة والثوابت: <em>The sun rises in the east.</em> (الشمس تشرق من الشرق.)</li>
+                            <li>للتعبير عن العادات والروتين اليومي: <em>I drink coffee every morning.</em> (أنا أشرب القهوة كل صباح.)</li>
+                            <li>للتعبير عن الجداول الزمنية والمواعيد الثابتة (مثل مواعيد القطارات أو الحصص): <em>The train leaves at 7 AM.</em></li>
+                        </ul>
+                        <h5>الكلمات الدالة (Keywords):</h5>
+                        <ul>
+                            <li><code>every</code>, <code>each</code>, <code>always</code>, <code>usually</code>, <code>often</code>, <code>sometimes</code>, <code>daily</code>, <code>monthly</code>, <code>weekly</code>, <code>yearly</code>.</li>
+                        </ul>
+                        <h5>كيف نكونه؟</h5>
+                        <p>مع I, You, We, They: الفعل يبقى كما هو (V1 - المصدر).</p>
+                        <p><em>Example: We play football.</em></p>
+                        <p>مع He, She, It: نضيف <code>s</code> أو <code>es</code> إلى نهاية الفعل (V1+s/es).</p>
+                        <p><em>Example: She reads books.</em> (نضيف <code>es</code> إذا انتهى الفعل بـ <code>s, ss, sh, ch, x, o</code>).</p>
+                        <h5>النفي (Negative):</h5>
+                        <p>مع I, You, We, They: <code>don't + V1 base</code></p>
+                        <p><em>Example: They don't like pizza.</em></p>
+                        <p>مع He, She, It: <code>doesn't + V1 base</code></p>
+                        <p><em>Example: He doesn't speak French.</em></p>
+                    </article>
+
+                    <article class="grammar-rule">
+                        <h4>ب. المضارع المستمر (Present Continuous)</h4>
+                        <h5>متى نستخدمه؟</h5>
+                        <ul>
+                            <li>للتعبير عن أحداث تحدث <em>الآن</em> في لحظة الكلام: <em>I am reading a book now.</em> (أنا أقرأ كتابًا الآن.)</li>
+                            <li>للتعبير عن أحداث مؤقتة: <em>He is living in London for a month.</em> (هو يعيش في لندن لمدة شهر.)</li>
+                            <li>للتعبير عن خطط مستقبلية مؤكدة ومرتبة مسبقًا: <em>We are meeting tomorrow at 6 PM.</em></li>
+                        </ul>
+                        <h5>الكلمات الدالة (Keywords):</h5>
+                        <ul>
+                            <li><code>now</code>, <code>at the moment</code>, <code>Look!</code>, <code>listen!</code>, <code>presently</code>, <code>currently</code>, <code>today</code>, <code>tonight</code>, <code>these days</code>, <code>still</code>.</li>
+                        </ul>
+                        <h5>كيف نكونه؟</h5>
+                        <p><code>is / are / am + Ving (الفعل + ing)</code></p>
+                        <p><em>Examples: I am writing. You are studying. He is sleeping.</em></p>
+                    </article>
+
+                    <article class="grammar-rule">
+                        <h4>ج. المضارع التام (Present Perfect)</h4>
+                        <h5>متى نستخدمه؟</h5>
+                        <ul>
+                            <li>للتعبير عن فعل بدأ في الماضي وما زال له أثر أو نتيجة في الحاضر: <em>I have lost my keys. (So, I can't enter my house now).</em></li>
+                            <li>للتعبير عن تجارب حياتية لم يحدد وقتها في الماضي: <em>Have you ever been to Paris?</em></li>
+                            <li>للتعبير عن فعل بدأ في الماضي واستمر حتى الآن: <em>She has lived here for ten years.</em></li>
+                        </ul>
+                        <h5>الكلمات الدالة (Keywords):</h5>
+                        <ul>
+                            <li><code>ever</code>, <code>never</code>, <code>just</code>, <code>already</code>, <code>recently</code>, <code>lately</code>, <code>yet</code> (في النفي والسؤال), <code>so far</code>, <code>since</code>, <code>for</code>.</li>
+                        </ul>
+                        <h5>كيف نكونه؟</h5>
+                        <p><code>have / has + V3 (التصريف الثالث للفعل)</code></p>
+                        <p><em>Examples: I have finished my homework. She has seen that movie.</em></p>
+                    </article>
+
+                    <article class="grammar-rule">
+                        <h4>د. المضارع التام المستمر (Present Perfect Continuous)</h4>
+                        <h5>متى نستخدمه؟</h5>
+                        <ul>
+                            <li>للتعبير عن فعل بدأ في الماضي واستمر حتى لحظة الكلام، مع التركيز على <em>مدة</em> أو <em>استمرارية</em> الفعل: <em>I have been studying for three hours.</em> (وما زلت أدرس).</li>
+                            <li>للتعبير عن سبب لنتيجة حاضرة: <em>Her eyes are red because she has been crying.</em></li>
+                        </ul>
+                        <h5>الكلمات الدالة (Keywords):</h5>
+                        <ul>
+                            <li><code>since</code>, <code>for</code>, <code>all day / all morning / all week</code>, <code>That's why...</code>, <code>How long...?</code>.</li>
+                        </ul>
+                        <h5>كيف نكونه؟</h5>
+                        <p><code>have / has been + Ving</code></p>
+                        <p><em>Example: They have been working hard.</em></p>
+                    </article>
+
+                    <article class="grammar-rule">
+                        <h4>هـ. الماضي البسيط (Past Simple)</h4>
+                        <h5>متى نستخدمه؟</h5>
+                        <ul>
+                            <li>للتعبير عن فعل بدأ وانتهى في الماضي في وقت محدد: <em>I visited my grandparents yesterday.</em></li>
+                            <li>لسرد أحداث متتالية في الماضي: <em>He woke up, ate breakfast, and went to work.</em></li>
+                        </ul>
+                        <h5>الكلمات الدالة (Keywords):</h5>
+                        <ul>
+                            <li><code>yesterday</code>, <code>last...</code> (last week, last month), <code>ago</code> (three days ago), <code>previous</code>, <code>ancient</code>, <code>in + سنة ماضية</code> (in 2005), <code>during + فترة ماضية</code>, <code>when + sub + were</code>.</li>
+                        </ul>
+                        <h5>كيف نكونه؟</h5>
+                        <p><code>V2 (التصريف الثاني للفعل)</code></p>
+                        <p><em>Example: She wrote a letter.</em></p>
+                        <h5>النفي (Negative):</h5>
+                        <p><code>didn't + V1 base</code></p>
+                        <p><em>Example: They didn't come to the party.</em></p>
+                    </article>
+
+                    <article class="grammar-rule">
+                        <h4>و. الماضي المستمر (Past Continuous)</h4>
+                        <h5>متى نستخدمه؟</h5>
+                        <ul>
+                            <li>للتعبير عن فعل كان مستمرًا في وقت معين في الماضي: <em>At 8 PM yesterday, I was watching TV.</em></li>
+                            <li>للتعبير عن فعل كان مستمرًا في الماضي عندما قاطعه فعل آخر (ماضي بسيط): <em>While I was studying, the phone rang.</em></li>
+                        </ul>
+                        <h5>الكلمات الدالة (Keywords):</h5>
+                        <ul>
+                            <li><code>While</code>, <code>as</code> (يتبعهما <code>sub + was/were + Ving</code> ثم <code>Sub + V2</code>).</li>
+                            <li><code>when + sub + V2</code> (يتبعها <code>was/were + Ving</code>).</li>
+                        </ul>
+                        <h5>كيف نكونه؟</h5>
+                        <p><code>was / were + Ving</code></p>
+                        <p><em>Examples: She was sleeping. They were playing.</em></p>
+                    </article>
+
+                    <article class="grammar-rule">
+                        <h4>ز. الماضي التام (Past Perfect)</h4>
+                        <h5>متى نستخدمه؟</h5>
+                        <ul>
+                            <li>للتعبير عن فعل حدث <em>قبل</em> فعل آخر في الماضي. الفعل الأقدم يكون ماضيًا تامًا. <em>By the time I arrived, she had already left.</em></li>
+                        </ul>
+                        <h5>الكلمات الدالة (Keywords):</h5>
+                        <ul>
+                            <li><code>After + sub + had V3</code>, ثم <code>sub + V2</code>.</li>
+                            <li><code>Before + sub + V2, sub + had V3</code>.</li>
+                            <li><code>By + sub + V2 / By + past time</code> (مثال: <code>By 2000</code>), ثم <code>had + V3</code>.</li>
+                        </ul>
+                        <h5>كيف نكونه؟</h5>
+                        <p><code>had + V3</code></p>
+                        <p><em>Example: He had finished his work before he went home.</em></p>
+                    </article>
+
+                    <article class="grammar-rule">
+                        <h4>ح. الماضي التام المستمر (Past Perfect Continuous)</h4>
+                        <h5>متى نستخدمه؟</h5>
+                        <ul>
+                            <li>للتعبير عن فعل بدأ في الماضي واستمر <em>لفترة من الزمن</em> قبل فعل آخر في الماضي. يركز على <em>مدة</em> الفعل. <em>She was tired because she had been working all day.</em></li>
+                        </ul>
+                        <h5>الكلمات الدالة (Keywords):</h5>
+                        <ul>
+                            <li><code>for</code>, <code>all</code> (all day/all week), خاصة عندما تكون هناك إشارة إلى الماضي البسيط (V2) في الجملة.</li>
+                        </ul>
+                        <h5>كيف نكونه؟</h5>
+                        <p><code>had been + Ving</code></p>
+                        <p><em>Example: They had been waiting for an hour before the bus arrived.</em></p>
+                    </article>
+
+                    <article class="grammar-rule">
+                        <h4>ط. المستقبل (Future Tenses)</h4>
+                        <h5>المستقبل البسيط (Simple Future): <code>will + V1</code></h5>
+                        <ul>
+                            <li>**متى نستخدمه؟**
+                                <ul>
+                                    <li>للتنبؤات العامة: <em>It will rain tomorrow.</em></li>
+                                    <li>للقرارات التلقائية في لحظة الكلام: <em>I'll help you with that.</em></li>
+                                    <li>للوعود والعروض: <em>I will call you later.</em></li>
+                                </ul>
+                            </li>
+                            <li>**الكلمات الدالة:** <code>tomorrow</code>, <code>tonight</code>, <code>today</code>, <code>next...</code>, <code>soon</code>, <code>in the future</code>, <code>in + سنة قادمة</code>, <code>this + year/week/month</code>, <code>these + weeks</code>, <code>in an hour</code>, <code>on time</code>, <code>on + day</code> (on Friday), <code>one day</code>, <code>the end of the week</code>.</li>
+                            <li>**مع الكلمات:** <code>Perhaps</code>, <code>probably</code>, <code>maybe</code>, <code>I think</code>, <code>I hope</code>.</li>
+                        </ul>
+
+                        <h5>المستقبل بـ <code>be going to + V1</code></h5>
+                        <ul>
+                            <li>**متى نستخدمه؟**
+                                <ul>
+                                    <li>للتعبير عن خطط ونوايا مؤكدة: <em>I am going to visit my aunt next week.</em></li>
+                                    <li>للتنبؤات القائمة على دليل مرئي: <em>Look at the black sky! It's going to rain.</em></li>
+                                </ul>
+                            </li>
+                            <li>**الكلمات الدالة:** <code>schedule</code> (دليل تخطيط)، <code>دليل توقع</code> (مثل <code>Look at the black sky</code>).</li>
+                            <li>**كيف نكونه؟** <code>is / are / am going to + V1</code></li>
+                        </ul>
+
+                        <h5>المستقبل المستمر (Future Continuous): <code>will be + Ving</code></h5>
+                        <ul>
+                            <li>**متى نستخدمه؟**
+                                <ul>
+                                    <li>للتعبير عن فعل سيكون مستمرًا في وقت معين في المستقبل: <em>At 10 AM tomorrow, I will be working.</em></li>
+                                    <li>للإشارة إلى أن شيئًا ما سيكون في طور الحدوث في المستقبل: <em>I'll be seeing John at the conference.</em></li>
+                                </ul>
+                            </li>
+                            <li>**الكلمات الدالة:**
+                                <ol>
+                                    <li><code>وقت محدد + future</code> (this time tomorrow, tomorrow morning).</li>
+                                    <li><code>in + فترة زمنية</code> (in an hour, in three days).</li>
+                                    <li>جمل الشرط مع <code>If</code>, <code>when</code> عندما لا يكون هناك <code>won't</code> أو <code>can't</code>.</li>
+                                </ol>
+                            </li>
+                        </ul>
+
+                        <h5>المستقبل التام (Future Perfect): <code>will have + V3</code></h5>
+                        <ul>
+                            <li>**متى نستخدمه؟**
+                                <ul>
+                                    <li>للتعبير عن فعل سيكون قد اكتمل <em>قبل</em> وقت معين في المستقبل: <em>By next year, I will have graduated.</em></li>
+                                </ul>
+                            </li>
+                            <li>**الكلمات الدالة:**
+                                <ul>
+                                    <li><code>For + future time</code> (For three years by next month).</li>
+                                    <li><code>By + V1 / future time</code> (By 2030, By the end of the year).</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section id="passive-voice" class="grammar-section">
+                    <h3>2. المبني للمجهول (Passive Voice): عندما يكون الفاعل غير مهم أو مجهول</h3>
+                    <p>نستخدم المبني للمجهول عندما يكون الفعل أهم من الفاعل، أو عندما يكون الفاعل مجهولاً أو غير مهم.</p>
+                    <h5>القاعدة الأساسية:</h5>
+                    <p><code>be + V3</code></p>
+                    <h5>كيف نحوله؟</h5>
+                    <ol>
+                        <li>حدد زمن الجملة من الفعل الرئيسي والكلمات الدالة.</li>
+                        <li>حدد الفاعل والمفعول به (الذي سيصبح فاعلاً في جملة المبني للمجهول).</li>
+                        <li>ضع المفعول به في بداية الجملة الجديدة.</li>
+                        <li>صرف الفعل <code>be</code> حسب زمن الجملة الجديدة والفاعل الجديد (المفعول به الأصلي).</li>
+                        <li>ضع التصريف الثالث (V3) للفعل الأصلي.</li>
+                        <li>إذا أردت ذكر الفاعل الأصلي (نادرًا ما يحدث)، استخدم <code>by + الفاعل</code> في نهاية الجملة.</li>
+                    </ol>
+                    <h5>أمثلة حسب الزمن:</h5>
+                    <ul>
+                        <li>**مضارع بسيط:** Active: <em>They build houses.</em> Passive: <em>Houses <strong>are built</strong>.</em></li>
+                        <li>**ماضي بسيط:** Active: <em>He wrote a letter.</em> Passive: <em>A letter <strong>was written</strong>.</em></li>
+                        <li>**مضارع تام:** Active: <em>She has eaten the apple.</em> Passive: <em>The apple <strong>has been eaten</strong>.</em></li>
+                        <li>**مستقبل بسيط:** Active: <em>They will clean the room.</em> Passive: <em>The room <strong>will be cleaned</strong>.</em></li>
+                    </ul>
+                    <h5>دلائل تدل على المبني للمجهول:</h5>
+                    <ol>
+                        <li><code>(by + اسم/ضمير)</code>: <em>The book was written <strong>by</strong> him.</em></li>
+                        <li><code>(It + passive be + V3 + that)</code>: <em>It is believed that he is innocent.</em></li>
+                        <li><code>(_Passive_ + to)</code>: <em>He is known <strong>to</strong> be a great artist.</em></li>
+                    </ol>
+                </section>
+
+                <section id="derivatives" class="grammar-section">
+                    <h3>3. المشتقات (Derivatives): أفعال تتبعها أفعال أخرى</h3>
+                    <p>بعض الأفعال تتطلب شكلاً معينًا للفعل الذي يأتي بعدها.</p>
+                    <article class="grammar-rule">
+                        <h5>أفعال تتبعها <code>to + V1 base</code>:</h5>
+                        <ul>
+                            <li><code>want</code>, <code>afford</code>, <code>plan</code>, <code>planning</code>, <code>intend</code>, <code>decide</code>, <code>hope</code>, <code>agree</code>, <code>expect</code>, <code>promise</code>.</li>
+                        </ul>
+                        <p><em>Examples: I want to learn English. They plan to travel next year.</em></p>
+                    </article>
+                    <article class="grammar-rule">
+                        <h5>أفعال تتبعها <code>Ving</code>:</h5>
+                        <ul>
+                            <li><code>stop</code>, <code>enjoy</code>, <code>finish</code>, <code>mind</code>, <code>avoid</code>, <code>suggest</code>, <code>consider</code>.</li>
+                        </ul>
+                        <p><em>Examples: He stopped smoking. She enjoys reading.</em></p>
+                    </article>
+                </section>
+
+                <section id="comparisons" class="grammar-section">
+                    <h3>4. المقارنات (Comparisons): وصف الاختلافات والتشابهات</h3>
+                    <p>تستخدم المقارنات لوصف العلاقة بين شيئين أو أكثر من حيث الصفات.</p>
+                    <article class="grammar-rule">
+                        <h4>أ. المقارنة (Comparative): A &lt; B</h4>
+                        <ul>
+                            <li>**للمقارنة بين شيئين أو شخصين.**</li>
+                            <li>**الصفات القصيرة (مقطع واحد أو مقطعين تنتهي بـ y):**
+                                <ul>
+                                    <li><code>(صفة + er + than)</code></li>
+                                    <li><em>Tall → taller than</em> (أطول من)</li>
+                                    <li><em>Happy → happier than</em> (أسعد من)</li>
+                                    <li><em>Example: This car is faster than that one.</em></li>
+                                </ul>
+                            </li>
+                            <li>**الصفات الطويلة (أكثر من مقطعين):**
+                                <ul>
+                                    <li><code>(more / less + صفة + than)</code></li>
+                                    <li><em>Beautiful → more beautiful than</em> (أكثر جمالاً من)</li>
+                                    <li><em>Difficult → less difficult than</em> (أقل صعوبة من)</li>
+                                    <li><em>Example: This book is more interesting than that movie.</em></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="grammar-rule">
+                        <h4>ب. المقارنة المتساوية (Equal Comparison): A = B</h4>
+                        <ul>
+                            <li>**للتعبير عن أن شيئين متساويان في صفة معينة.**</li>
+                            <li><code>(as + صفة + as)</code></li>
+                            <li><em>Examples: He is as tall as his brother. This coffee is as good as the one I had yesterday.</em></li>
+                        </ul>
+                    </article>
+                    <article class="grammar-rule">
+                        <h4>ج. المقارنة غير المتساوية (Unequal Comparison): A ≠ B</h4>
+                        <ul>
+                            <li>**للتعبير عن أن شيئين غير متساويين في صفة معينة.**</li>
+                            <li><code>(V-not + as + صفة + as)</code> (الفعل المنفي)</li>
+                            <li><em>Examples: He is not as old as his sister. This car doesn't run as fast as mine.</em></li>
+                        </ul>
+                        <h5>مقارنة الكميات (أسماء معدودة وغير معدودة):</h5>
+                        <ul>
+                            <li>**مع الأسماء المعدودة (Countable Nouns):**
+                                <ul>
+                                    <li><code>(as many + اسم معدود + as)</code>: <em>I have as many books as you.</em></li>
+                                    <li><code>(not as many + اسم معدود + as)</code>: <em>I don't have as many friends as her.</em></li>
+                                </ul>
+                            </li>
+                            <li>**مع الأسماء غير المعدودة (Uncountable Nouns):**
+                                <ul>
+                                    <li><code>(as much + اسم غير معدود + as)</code>: <em>He has as much money as his father.</em></li>
+                                    <li><code>(not as much + اسم غير معدود + as)</code>: <em>We don't have as much time as we need.</em></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="grammar-rule">
+                        <h4>د. التفضيل (Superlative): A = Group B</h4>
+                        <ul>
+                            <li>**للمقارنة بين شيء واحد ومجموعة من الأشياء (أكثر من اثنين).**</li>
+                            <li>**الصفات القصيرة:**
+                                <ul>
+                                    <li><code>(the + صفة + est)</code></li>
+                                    <li><em>Tall → the tallest</em> (الأطول)</li>
+                                    <li><em>Happy → the happiest</em> (الأسعد)</li>
+                                    <li><em>Example: He is the tallest student in the class.</em></li>
+                                </ul>
+                            </li>
+                            <li>**الصفات الطويلة:**
+                                <ul>
+                                    <li><code>(the most / the least + صفة)</code></li>
+                                    <li><em>Beautiful → the most beautiful</em> (الأكثر جمالاً)</li>
+                                    <li><em>Difficult → the least difficult</em> (الأقل صعوبة)</li>
+                                    <li><em>Example: This is the most interesting movie I've ever seen.</em></li>
+                                </ul>
+                            </li>
+                            <li>**تستخدم غالبًا مع:** <code>in the world</code>, <code>in the school</code>, <code>in the class</code>, <code>shop</code>, <code>university</code>, <code>subject</code>, <code>subjects</code>.</li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section id="causative" class="grammar-section">
+                    <h3>5. السببية (Causative): جعل شخص آخر يقوم بالعمل</h3>
+                    <p>تستخدم السببية عندما نجعل شخصًا آخر يقوم بعمل ما نيابة عنا.</p>
+                    <article class="grammar-rule">
+                        <h5>القاعدة الأساسية (Have/Get Causative):</h5>
+                        <ul>
+                            <li><code>Subject + have/get (مصرف حسب الزمن) + Object (شخص) + V1 base</code> (مع have)
+                                <ul>
+                                    <li><em>Example: I had John fix my car.</em> (جعلت جون يصلح سيارتي.)</li>
+                                </ul>
+                            </li>
+                            <li><code>Subject + have/get (مصرف حسب الزمن) + Object (شيء) + V3</code> (مع have/get)
+                                <ul>
+                                    <li><em>Example: I had my car fixed.</em> (جعلت سيارتي تُصلح.)</li>
+                                    <li><em>Example: She got her hair cut.</em> (جعلت شعرها يُقص.)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="grammar-rule">
+                        <h5><code>Ask Causative</code>:</h5>
+                        <ul>
+                            <li><code>Subject + asked + Object (شخص) + to + V1 base + Object (شيء)</code>
+                                <ul>
+                                    <li><em>Example: He asked me to help him.</em> (طلب مني أن أساعده.)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="grammar-rule">
+                        <h5><code>Intend / Plan Causative</code>:</h5>
+                        <ul>
+                            <li><code>is / are / am planning / intending + to + V1 base</code>
+                                <ul>
+                                    <li><em>Example: I am planning to visit my friends.</em> (أخطط لزيارة أصدقائي.)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section id="used-to" class="grammar-section">
+                    <h3>6. اعتاد على (Used to): عادات الماضي والحاضر</h3>
+                    <p>تستخدم <code>used to</code> للتعبير عن عادات وأفعال كانت تحدث بانتظام في الماضي ولكنها لم تعد تحدث الآن.</p>
+                    <article class="grammar-rule">
+                        <h5>الماضي: <code>Subject + used to + V1 base</code></h5>
+                        <ul>
+                            <li><em>Example: I used to play football when I was young.</em> (اعتدت أن ألعب كرة القدم عندما كنت صغيراً.)</li>
+                            <li>**النفي:** <code>Subject + didn't use to + V1 base</code>
+                                <ul>
+                                    <li><em>Example: She didn't use to like vegetables.</em></li>
+                                </ul>
+                            </li>
+                            <li>**السؤال:** <code>Did + Subject + use to + V1 base?</code>
+                                <ul>
+                                    <li><em>Example: Did you use to live here?</em></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="grammar-rule">
+                        <h5>الحاضر (الإعتياد على شيء الآن): <code>be used to + Ving / noun / pronoun</code></h5>
+                        <ul>
+                            <li><code>is / are / am / was / were + used to + Ving / noun / pronoun</code></li>
+                            <li>**متى نستخدمه؟** للتعبير عن أن الشخص معتاد على شيء ما (أصبح الأمر طبيعيًا له).
+                                <ul>
+                                    <li><em>Example: I am used to waking up early.</em> (أنا معتاد على الاستيقاظ مبكرًا.)</li>
+                                    <li><em>Example: He is used to the noise.</em> (هو معتاد على الضوضاء.)</li>
+                                </ul>
+                            </li>
+                            <li>**الكلمات الدالة للحاضر:** <code>now</code>, <code>nowadays</code>, <code>these days</code>, <code>always</code>, <code>usually</code>, <code>every</code>, <code>often</code>.</li>
+                            <li>**الكلمات الدالة للماضي:** <code>when + sub + V2</code>, <code>last</code>, <code>ago</code>, <code>in the past</code>.</li>
+                        </ul>
+                    </article>
+                    <article class="grammar-rule">
+                        <h5>التحويل بين الماضي والحاضر:</h5>
+                        <ul>
+                            <li><code>used to + V1</code> (عادة في الماضي) لكن <code>now / but these days</code> + <code>is / are / am used to + Ving / noun / pronoun</code> (عادة في الحاضر).
+                                <ul>
+                                    <li><em>Example: I used to live in a small town, but now I am used to living in a big city.</em></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+            </div>
+        </section>
+
+        <!-- Chapter 2: Advanced Grammar -->
+        <section id="chapter2" class="chapter-content">
+            <div class="container">
+                <h2>الفصل الثاني: قواعد متقدمة</h2>
+                <p class="intro-text">بعد إتقان الأساسيات، حان الوقت للانتقال إلى المستويات المتقدمة! هنا ستتعمق في هياكل الجمل المعقدة لتصبح متحدثًا أكثر طلاقة.</p>
+
+                <div class="chapter-navigation">
+                    <a href="#conditionals">الجمل الشرطية</a>
+                    <a href="#reported-speech">الكلام المنقول</a>
+                    <a href="#impersonal-sentences">الجمل غير الشخصية</a>
+                    <a href="#modals">الأفعال الناقصة</a>
+                    <a href="#rewrite">إعادة الكتابة</a>
+                    <a href="#wishes">أمنيات الماضي غير الحقيقية</a>
+                    <a href="#cleft-sentences">الجمل المجزأة</a>
+                    <a href="#relative-pronouns">ضمائر الوصل</a>
+                    <a href="#indirect-questions">الجمل الاستفهامية غير المباشرة</a>
+                </div>
+
+                <section id="conditionals" class="grammar-section">
+                    <h3>1. الجمل الشرطية (Conditional Sentences): ماذا لو؟</h3>
+                    <p>تستخدم الجمل الشرطية للتعبير عن احتمالات أو مواقف افتراضية أو ندم. تتكون عادة من جملة الشرط (If clause) وجملة النتيجة (main clause).</p>
+                    <article class="grammar-rule">
+                        <h4>أ. النوع صفر (Zero Conditional)</h4>
+                        <h5>التركيب:</h5>
+                        <p><code>If / When + Present Simple, Present Simple</code></p>
+                        <h5>الاستخدام:</h5>
+                        <ul>
+                            <li>للحقائق العامة، الحقائق العلمية، والعادات التي تكون دائمًا صحيحة.</li>
+                            <li><em>Example: If you heat ice, it melts.</em> (إذا سخنت الثلج، فإنه يذوب.)</li>
+                            <li><em>Example: When I am tired, I go to sleep early.</em></li>
+                        </ul>
+                    </article>
+                    <article class="grammar-rule">
+                        <h4>ب. النوع الأول (First Conditional)</h4>
+                        <h5>التركيب:</h5>
+                        <p><code>If + Present Simple, will / won't + V1</code></p>
+                        <h5>الاستخدام:</h5>
+                        <ul>
+                            <li>للتعبير عن موقف محتمل في المستقبل ونتيجته المحتملة.</li>
+                            <li><em>Example: If it rains tomorrow, we will stay home.</em></li>
+                            <li><em>Example: If you study hard, you will pass the exam.</em></li>
+                        </ul>
+                    </article>
+                    <article class="grammar-rule">
+                        <h4>ج. النوع الثاني (Second Conditional)</h4>
+                        <h5>التركيب:</h5>
+                        <p><code>If + Past Simple (V2), would + V1</code></p>
+                        <h5>الاستخدام:</h5>
+                        <ul>
+                            <li>للتعبير عن موقف افتراضي أو غير واقعي في الحاضر أو المستقبل، أو لإعطاء نصيحة.</li>
+                            <li><em>Example: If I had a million dollars, I would travel the world.</em> (لكن ليس لدي).</li>
+                            <li><em>Example: If I were you, I would apologize.</em> (نصيحة).</li>
+                            <li>**ملاحظة:** في هذا النوع، يمكن استخدام <code>were</code> بدلاً من <code>was</code> مع <code>I, he, she, it</code>، وهو الشكل الأكثر شيوعًا في اللغة الرسمية.</li>
+                        </ul>
+                    </article>
+                    <article class="grammar-rule">
+                        <h4>د. النوع الثالث (Third Conditional)</h4>
+                        <h5>التركيب:</h5>
+                        <p><code>If + Past Perfect (had V3 / hadn't V3), would have V3 / might have V3 / could have V3</code></p>
+                        <h5>الاستخدام:</h5>
+                        <ul>
+                            <li>للتعبير عن ندم أو افتراض عكسي لشيء حدث في الماضي ولم يمكن تغييره.</li>
+                            <li><em>Example: If I had studied harder, I would have passed the exam.</em> (لكني لم أدرس، ولم أنجح).</li>
+                            <li><em>Example: If she had known, she might have helped him.</em></li>
+                        </ul>
+                        <h5>أدوات شرطية بديلة لـ "If":</h5>
+                        <ul>
+                            <li><code>Provided that</code>, <code>Providing that</code>: بشرط أن.</li>
+                            <li><code>Even if</code>: حتى لو.</li>
+                            <li><code>As long as</code>: طالما.</li>
+                            <li><code>Unless</code>: إذا لم (تعني <code>if not</code>). <em>Example: You won't pass unless you study.</em></li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section id="reported-speech" class="grammar-section">
+                    <h3>2. الكلام المنقول (Reported Speech): نقل ما قاله الآخرون</h3>
+                    <p>عندما ننقل كلام شخص آخر دون اقتباسه حرفيًا، نستخدم الكلام المنقول. تتغير الضمائر والأزمنة وبعض الكلمات الدالة.</p>
+                    <article class="grammar-rule">
+                        <h5>الجمل الخبرية:</h5>
+                        <p>نستخدم <code>said that</code> أو <code>told that</code> (مع وجود مفعول به بعد <code>told</code>).</p>
+                        <p><em>Example: He said, "I am happy." → He said that he was happy.</em></p>
+                    </article>
+                    <article class="grammar-rule">
+                        <h5>التغييرات الرئيسية:</h5>
+                        <h6>1. الضمائر (Pronouns):</h6>
+                        <ul>
+                            <li><code>I</code> → <code>he / she</code></li>
+                            <li><code>me</code> → <code>him / her</code></li>
+                            <li><code>my</code> → <code>his / her</code></li>
+                            <li><code>we</code> → <code>they</code></li>
+                            <li><code>us</code> → <code>them</code></li>
+                            <li><code>our</code> → <code>their</code></li>
+                        </ul>
+                        <h6>2. الأزمنة (Tenses): (تتراجع خطوة للوراء)</h6>
+                        <ul>
+                            <li><code>Present Simple (V1)</code> → <code>Past Simple (V2)</code></li>
+                            <li><code>Present Continuous (is/are/am + Ving)</code> → <code>Past Continuous (was/were + Ving)</code></li>
+                            <li><code>Present Perfect (have/has + V3)</code> → <code>Past Perfect (had + V3)</code></li>
+                            <li><code>Past Simple (V2)</code> → <code>Past Perfect (had + V3)</code></li>
+                            <li><code>Past Continuous (was/were + Ving)</code> → <code>Past Perfect Continuous (had been + Ving)</code></li>
+                            <li><code>will</code> → <code>would</code></li>
+                            <li><code>can</code> → <code>could</code></li>
+                            <li><code>may</code> → <code>might</code></li>
+                            <li><code>must / have to</code> → <code>had to</code></li>
+                            <li><code>modals + V1</code> (مثل: <code>should</code>, <code>could</code>, <code>would</code>, <code>might</code>) تبقى كما هي.</li>
+                        </ul>
+                        <h6>3. الظروف الزمنية والمكانية (Time and Place Adverbs):</h6>
+                        <ul>
+                            <li><code>here</code> → <code>there</code></li>
+                            <li><code>now</code> → <code>then</code></li>
+                            <li><code>today</code> → <code>that day</code></li>
+                            <li><code>tonight</code> → <code>that night</code></li>
+                            <li><code>this</code> → <code>that</code></li>
+                            <li><code>these</code> → <code>those</code></li>
+                            <li><code>yesterday</code> → <code>the day before / the previous day</code></li>
+                            <li><code>tomorrow</code> → <code>the day after / the next day / the following day</code></li>
+                            <li><code>last...</code> → <code>the... before / the previous...</code></li>
+                            <li><code>next...</code> → <code>the... after / the following...</code></li>
+                        </ul>
+                    </article>
+                    <article class="grammar-rule">
+                        <h5>الجمل الاستفهامية (Reported Questions):</h5>
+                        <ul>
+                            <li>نحولها إلى جمل خبرية (فاعل ثم فعل).</li>
+                            <li>إذا بدأت بـ <code>wh-word</code> (what, where, why...)، تبقى الكلمة كما هي.
+                                <ul>
+                                    <li><em>Direct: "Where do you live?" → Indirect: He asked where I lived.</em></li>
+                                </ul>
+                            </li>
+                            <li>إذا كانت إجابتها بنعم أو لا، نستخدم <code>if</code> أو <code>whether</code>.
+                                <ul>
+                                    <li><em>Direct: "Is he coming?" → Indirect: She asked if I was coming.</em></li>
+                                </ul>
+                            </li>
+                            <li>**أفعال تقديم السؤال:** <code>asked</code>, <code>wondered</code>, <code>wanted to know</code>, <code>enquired</code>.</li>
+                        </ul>
+                    </article>
+                    <article class="grammar-rule">
+                        <h5>الجمل الأمرية (Reported Commands/Requests):</h5>
+                        <ul>
+                            <li>نستخدم <code>to + V1 base</code> للأمر الإيجابي و <code>not to + V1 base</code> للأمر السلبي.</li>
+                            <li>نستخدم أفعال مثل: <code>told</code>, <code>ordered</code>, <code>advised</code>, <code>asked</code>, <code>requested</code>.
+                                <ul>
+                                    <li><em>Example: He said, "Open the door." → He told me to open the door.</em></li>
+                                    <li><em>Example: She said, "Don't touch it." → She told me not to touch it.</em></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section id="impersonal-sentences" class="grammar-section">
+                    <h3>3. الجمل غير الشخصية (Impersonal Sentences): عندما يكون الفاعل غير محدد</h3>
+                    <p>تستخدم هذه الجمل لنقل معلومات أو آراء عامة دون تحديد من قالها.</p>
+                    <article class="grammar-rule">
+                        <h5>التركيب الشائع:</h5>
+                        <h6>1. الشكل الأول: <code>It + be (passive) + V3 + that + Clause</code></h6>
+                        <ul>
+                            <li><em>Example: They say that he is a good doctor. → It is said that he is a good doctor.</em> (يقال إنه طبيب جيد.)</li>
+                            <li><em>Example: People believe that he stole the money. → It is believed that he stole the money.</em> (يُعتقد أنه سرق المال.)</li>
+                        </ul>
+                        <h6>2. الشكل الثاني: <code>Subject (فاعل الجملة الأصلية بعد that) + be (passive) + V3 + to + V1 base / have V3</code></h6>
+                        <ul>
+                            <li><em>Example: He is said to be a good doctor.</em> (هو يقال إنه طبيب جيد.)</li>
+                            <li><em>Example: He is believed to have stolen the money.</em> (هو يُعتقد أنه سرق المال.)</li>
+                        </ul>
+                        <h5>متى نستخدم <code>to + V1 base</code> أو <code>to have + V3</code> في الشكل الثاني؟</h5>
+                        <ul>
+                            <li>إذا كان زمن فعل الجملة الأصلية (بعد that) <em>نفس</em> زمن فعل <code>be</code> في المبني للمجهول، نستخدم <code>to + V1 base</code>.
+                                <ul>
+                                    <li><em>Example: They <strong>think</strong> he <strong>is</strong> honest.</em> (Present/Present) → <em>He <strong>is thought</strong> <strong>to be</strong> honest.</em></li>
+                                </ul>
+                            </li>
+                            <li>إذا كان زمن فعل الجملة الأصلية (بعد that) <em>أقدم</em> من زمن فعل <code>be</code> في المبني للمجهول، نستخدم <code>to have + V3</code>.
+                                <ul>
+                                    <li><em>Example: They <strong>think</strong> he <strong>was</strong> honest.</em> (Present/Past) → <em>He <strong>is thought</strong> <strong>to have been</strong> honest.</em></li>
+                                    <li><em>Example: They <strong>thought</strong> he <strong>stole</strong> the money.</em> (Past/Past) → <em>He <strong>was thought</strong> <strong>to have stolen</strong> the money.</em></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section id="modals" class="grammar-section">
+                    <h3>4. الأفعال الناقصة (Modals): التعبير عن الاحتمال، القدرة، الضرورة</h3>
+                    <p>الأفعال الناقصة (مثل <code>can</code>, <code>may</code>, <code>must</code>, <code>should</code>, <code>will</code>, <code>would</code>, <code>could</code>, <code>might</code>) تعبر عن القدرة، الإذن، الاحتمال، الضرورة، النصيحة، إلخ.</p>
+                    <article class="grammar-rule">
+                        <h5>تحويلات شائعة:</h5>
+                        <ul>
+                            <li><code>perhaps</code> (ربما) → <code>might + V1 base</code> (احتمال ضعيف)
+                                <ul>
+                                    <li><em>Example: Perhaps he will come. → He might come.</em></li>
+                                </ul>
+                            </li>
+                            <li><code>necessary</code> (ضروري) → <code>have to / has to + V1 base</code> (إلزام خارجي)
+                                <ul>
+                                    <li><em>Example: It is necessary to study. → You have to study.</em></li>
+                                </ul>
+                            </li>
+                            <li><code>not necessary</code> (ليس ضروريًا) → <code>don't have to / doesn't have to + V1 base</code> (لا يوجد إلزام)
+                                <ul>
+                                    <li><em>Example: It is not necessary to leave now. → You don't have to leave now.</em></li>
+                                </ul>
+                            </li>
+                            <li><code>not allowed</code> (غير مسموح) → <code>mustn't + V1 base</code> (حظر قوي)
+                                <ul>
+                                    <li><em>Example: You are not allowed to smoke here. → You mustn't smoke here.</em></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section id="rewrite" class="grammar-section">
+                    <h3>5. إعادة الكتابة (Rewrite): التحويل بين صيغ الجمل</h3>
+                    <p>تشمل إعادة الكتابة القدرة على تحويل الجمل بين أزمنة مختلفة أو هياكل مختلفة للحفاظ على المعنى.</p>
+                    <article class="grammar-rule">
+                        <h5>التحويل بين المضارع التام المستمر والماضي البسيط:</h5>
+                        <ul>
+                            <li><code>Started + Ving + at + وقت... → Still...</code>
+                                <ul>
+                                    <li><em>Example: He started living here at 2010. → He still lives here.</em></li>
+                                </ul>
+                            </li>
+                            <li><code>Subject + have / has been Ving + Since + وقت.</code>
+                                <ul>
+                                    <li><em>Example: He has been living here since 2010.</em></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="grammar-rule">
+                        <h5>التحويل بين أزمنة الماضي (تسلسل الأحداث):</h5>
+                        <ul>
+                            <li><code>had V3 + and then + V2</code> (الفعل الأول حدث ثم الثاني)
+                                <ul>
+                                    <li><em>Example: He had finished his dinner, and then he went out.</em></li>
+                                </ul>
+                            </li>
+                            <li><code>Before + sub + V2, sub + had V3</code>
+                                <ul>
+                                    <li><em>Example: Before he went out, he had finished his dinner.</em></li>
+                                </ul>
+                            </li>
+                            <li><code>After + sub + had V3, sub + V2</code>
+                                <ul>
+                                    <li><em>Example: After he had finished his dinner, he went out.</em></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section id="wishes" class="grammar-section">
+                    <h3>6. أمنيات الماضي غير الحقيقية (Unreal Past / Wishes & If only): التعبير عن الندم والأمنيات</h3>
+                    <p>تستخدم للتعبير عن أمنيات أو ندم على مواقف لا يمكن تغييرها في الحاضر أو الماضي.</p>
+                    <article class="grammar-rule">
+                        <h5>التعبير عن أمنية في الحاضر (موقف غير واقعي الآن):</h5>
+                        <ul>
+                            <li><code>Wish / If only + Subject + Past Simple (V2 / didn't V1)</code></li>
+                            <li>**متى نستخدمه؟** عندما نتمنى أن يكون الوضع في الحاضر مختلفًا عما هو عليه.
+                                <ul>
+                                    <li><em>Example: I wish I had more money.</em> (لكني لا أملك الكثير.)</li>
+                                    <li><em>Example: If only I knew the answer.</em> (لكني لا أعرف.)</li>
+                                </ul>
+                            </li>
+                            <li>**ملاحظة:** نستخدم <code>were</code> مع جميع الضمائر في هذا النوع.
+                                <ul>
+                                    <li><em>Example: I wish I were taller.</em></li>
+                                    <li><em>Example: She wishes she were a bird.</em></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="grammar-rule">
+                        <h5>التعبير عن ندم في الماضي (موقف لا يمكن تغييره):</h5>
+                        <ul>
+                            <li><code>Wish / If only + Subject + Past Perfect (had V3 / hadn't V3)</code></li>
+                            <li>**متى نستخدمه؟** عندما نندم على شيء حدث أو لم يحدث في الماضي.
+                                <ul>
+                                    <li><em>Example: I wish I had studied harder for the exam.</em> (لكني لم أدرس، وفشلت.)</li>
+                                    <li><em>Example: If only I hadn't eaten so much cake.</em> (لكني أكلت الكثير.)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="grammar-rule">
+                        <h5>ملاحظات هامة عند التحويل:</h5>
+                        <ul>
+                            <li>إذا كان الفعل في الجملة الأصلية (المطلوب تحويلها) في المضارع (V1)، ففي جملة <code>wish/if only</code> يصبح ماضي بسيط (V2/didn't V1).</li>
+                            <li>إذا كان الفعل في الجملة الأصلية في الماضي (V2)، ففي جملة <code>wish/if only</code> يصبح ماضي تام (had V3/hadn't V3).</li>
+                            <li>**العكس صحيح:** الإثبات يصبح نفي، والنفي يصبح إثبات (إلا في بعض الحالات الخاصة).
+                                <ul>
+                                    <li><em>Example: I <strong>am</strong> sick. → I wish I <strong>weren't</strong> sick.</em></li>
+                                    <li><em>Example: I <strong>didn't</strong> go to the party. → I wish I <strong>had gone</strong> to the party.</em></li>
+                                </ul>
+                            </li>
+                            <li>**تحويلات خاصة:**
+                                <ul>
+                                    <li><code>regret + V-ing</code> → <code>hadn't + V3</code> (ندم على فعل حدث)
+                                        <ul>
+                                            <li><em>Example: He regrets leaving his job. → He wishes he hadn't left his job.</em></li>
+                                        </ul>
+                                    </li>
+                                    <li><code>I feel ill</code> → <code>hadn't + V3</code> (إذا كان يشعر بالمرض في الماضي)</li>
+                                    <li><code>would like</code> → <code>V2</code> (تعبير عن رغبة).</li>
+                                    <li><code>Concentrate</code> → <code>had concentrated</code> (إذا كان في الماضي).</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h5>إعادة كتابة <code>should</code> / <code>should have V3</code>:</h5>
+                        <ul>
+                            <li><code>should V1</code> (نصيحة للحاضر/المستقبل) → إذا كانت الجملة الأصلية مثبتة تصبح منفية والعكس (في زمن الماضي التام) <code>had V3</code>
+                                <ul>
+                                    <li><em>Example: You should study harder.</em> (نصيحة) → <em>I wish you had studied harder.</em></li>
+                                </ul>
+                            </li>
+                            <li><code>should have V3</code> (ندم على فعل في الماضي) → إذا كانت الجملة الأصلية مثبتة تصبح منفية والعكس (في زمن الماضي التام) <code>had V3</code>
+                                <ul>
+                                    <li><em>Example: He should have come to the party.</em> (ندم) → <em>He wishes he had come to the party.</em></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section id="cleft-sentences" class="grammar-section">
+                    <h3>7. الجمل المجزأة (Cleft Sentences): التركيز على معلومة محددة</h3>
+                    <p>تستخدم الجمل المجزأة لتسليط الضوء على جزء معين من الجملة (مثل شخص، شيء، مكان، زمان).</p>
+                    <article class="grammar-rule">
+                        <h5>البنية العامة:</h5>
+                        <ol>
+                            <li><code>The + [التركيز] + is/was + (ضمير مناسب) + بقية الجملة.</code></li>
+                            <li><code>It is/was + [التركيز] + (ضمير مناسب) + بقية الجملة.</code></li>
+                        </ol>
+                        <h5>أمثلة على [التركيز] والضمير المناسب:</h5>
+                        <ul>
+                            <li>**للعاقل (The person):** <code>who</code>
+                                <ul>
+                                    <li><em>Example: Ahmed broke the window. → The person <strong>who</strong> broke the window <strong>was</strong> Ahmed.</em></li>
+                                    <li><em>Example: It <strong>was</strong> Ahmed <strong>who</strong> broke the window.</em></li>
+                                </ul>
+                            </li>
+                            <li>**لغير العاقل (The thing / The subject / The event / The prize):** <code>which</code> أو <code>that</code>
+                                <ul>
+                                    <li><em>Example: I lost my keys yesterday. → The thing <strong>which</strong> I lost yesterday <strong>was</strong> my keys.</em></li>
+                                    <li><em>Example: It <strong>was</strong> my keys <strong>that</strong> I lost yesterday.</em></li>
+                                </ul>
+                            </li>
+                            <li>**للمكان (The place / The country):** <code>where</code>
+                                <ul>
+                                    <li><em>Example: I met him in London. → The place <strong>where</strong> I met him <strong>was</strong> London.</em></li>
+                                    <li><em>Example: It <strong>was</strong> London <strong>where</strong> I met him.</em></li>
+                                </ul>
+                            </li>
+                            <li>**للزمان (The time / The year):** <code>when</code>
+                                <ul>
+                                    <li><em>Example: He arrived on Monday. → The day <strong>when</strong> he arrived <strong>was</strong> Monday.</em></li>
+                                    <li><em>Example: It <strong>was</strong> Monday <strong>when</strong> he arrived.</em></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section id="relative-pronouns" class="grammar-section">
+                    <h3>8. ضمائر الوصل (Relative Pronouns): ربط الجمل</h3>
+                    <p>تستخدم ضمائر الوصل لربط جملتين معًا وتقديم معلومات إضافية عن اسم (antecedent) في الجملة الرئيسية.</p>
+                    <article class="grammar-rule">
+                        <ul>
+                            <li>**<code>Who</code>:** للعاقل (الأشخاص)
+                                <ul>
+                                    <li>يتبعها فعل.</li>
+                                    <li><em>Example: The man <strong>who</strong> lives next door is a doctor.</em></li>
+                                </ul>
+                            </li>
+                            <li>**<code>Which</code>:** لغير العاقل (الأشياء، الحيوانات)
+                                <ul>
+                                    <li>يتبعها فعل أو فاعل + فعل.</li>
+                                    <li><em>Example: This is the book <strong>which</strong> I bought yesterday.</em></li>
+                                    <li><em>Example: The car <strong>which</strong> is parked outside is red.</em></li>
+                                </ul>
+                            </li>
+                            <li>**<code>That</code>:** للعاقل وغير العاقل
+                                <ul>
+                                    <li>يمكن استخدامه بدلاً من <code>who</code> أو <code>which</code> في الجمل التعريفية (restricting clauses).</li>
+                                    <li>يتبعها فعل أو فاعل + فعل.</li>
+                                    <li><em>Examples: The girl <strong>that</strong> won the prize is my sister. The computer <strong>that</strong> I bought is fast.</em></li>
+                                    <li>**ملاحظة:** لا يُستخدم <code>that</code> في الجمل غير التعريفية (non-restricting clauses)، وهي الجمل التي تُفصل بفاصلات.</li>
+                                </ul>
+                            </li>
+                            <li>**<code>Whose</code>:** للملكية (عاقل وغير عاقل)
+                                <ul>
+                                    <li>يتبعها اسم (noun) يدل على الشيء المملوك، ثم فعل أو ضمير + فعل.</li>
+                                    <li><em>Examples: I know a girl <strong>whose</strong> brother is a famous artist. The house <strong>whose</strong> roof is red is mine.</em></li>
+                                </ul>
+                            </li>
+                            <li>**<code>When</code>:** للزمان
+                                <ul>
+                                    <li>يتبعها فاعل + فعل.</li>
+                                    <li><em>Example: I remember the day <strong>when</strong> we first met.</em></li>
+                                </ul>
+                            </li>
+                            <li>**<code>Where</code>:** للمكان (country, city, building)
+                                <ul>
+                                    <li>يتبعها فاعل + فعل + مكمل (com).</li>
+                                    <li><em>Examples: This is the park <strong>where</strong> we usually play. London is the city <strong>where</strong> I grew up.</em></li>
+                                </ul>
+                            </li>
+                            <li>**ملاحظة حول <code>where</code> و <code>which/that</code> للمكان:**
+                                <ul>
+                                    <li>نستخدم <code>where</code> إذا كانت الجملة التالية تتحدث عن <code>مكان حدوث الفعل</code> داخل هذا المكان.</li>
+                                    <li>نستخدم <code>which</code> أو <code>that</code> إذا كانت الجملة التالية تتحدث عن <code>المكان نفسه</code> كفاعل أو مفعول به للفعل.
+                                        <ul>
+                                            <li><em>Example: This is the school <strong>where</strong> I studied.</em> (درست <em>في</em> المدرسة.)</li>
+                                            <li><em>Example: This is the school <strong>which</strong> was built last year.</em> (المدرسة <em>هي</em> التي بُنيت.)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section id="indirect-questions" class="grammar-section">
+                    <h3>9. الجمل الاستفهامية غير المباشرة (Indirect Questions): أسئلة أكثر تهذيبًا</h3>
+                    <p>تستخدم لتحويل الأسئلة المباشرة إلى جزء من جملة أخرى، مما يجعلها أكثر تهذيبًا.</p>
+                    <article class="grammar-rule">
+                        <h5>القاعدة:</h5>
+                        <p>بعد عبارات مثل <code>Could you tell me</code>, <code>Do you know</code>, <code>I wonder</code>, <code>Do you mind telling me</code>, <code>I have no idea</code>, <code>Could you explain</code>:</p>
+                        <ul>
+                            <li>**الترتيب يصبح ترتيب جملة خبرية:** <code>Subject + Verb + (complement)</code>.</li>
+                            <li>**إذا بدأ السؤال بـ <code>Wh-word</code>:** تبقى كلمة الاستفهام كما هي.
+                                <ul>
+                                    <li><em>Direct: "Where is the bank?" → Indirect: Could you tell me <strong>where the bank is</strong>?</em></li>
+                                </ul>
+                            </li>
+                            <li>**إذا كان السؤال إجابته نعم أو لا (لا يبدأ بـ Wh-word):** نستخدم <code>if</code> أو <code>whether</code>.
+                                <ul>
+                                    <li><em>Direct: "Is he coming?" → Indirect: Do you know <strong>if he is coming</strong>?</em></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="quiz-container">
+            <div class="container">
+                <h2>اختبر معلوماتك: امتحان القواعد الشامل</h2>
+                <p class="intro-text">حان الوقت لتطبيق ما تعلمته! هذا الاختبار المكون من 40 سؤالًا سيساعدك على تقييم فهمك لجميع القواعد التي تناولناها.</p>
+                <p class="instructions">**تعليمات:** اختر الإجابة الصحيحة لكل سؤال. بعد الانتهاء، ستظهر لك نتيجتك مع الإجابات الصحيحة.</p>
+
+                <div id="quiz-area">
+                    <div id="question-counter">السؤال <span id="current-question-number">1</span> من <span id="total-questions">40</span></div>
+                    <h3 id="question-text"></h3>
+                    <div id="options-container" class="options-grid">
+                        <!-- Options will be loaded here by JavaScript -->
+                    </div>
+                    <div class="quiz-navigation">
+                        <button id="prev-btn" class="btn btn-secondary" style="display: none;">السابق</button>
+                        <button id="next-btn" class="btn btn-primary">السؤال التالي</button>
+                        <button id="submit-btn" class="btn btn-success" style="display: none;">إنهاء الاختبار</button>
+                    </div>
+                </div>
+
+                <div id="results-area" style="display: none;">
+                    <h3>لقد أكملت الاختبار!</h3>
+                    <p>درجتك: <span id="score">0</span> من <span id="max-score">40</span></p>
+                    <p>النسبة المئوية: <span id="percentage">0</span>%</p>
+                    <h4 style="margin-top: 30px;">مراجعة الإجابات:</h4>
+                    <div id="answers-review">
+                        <!-- Answers review will be loaded here by JavaScript -->
+                    </div>
+                    <button id="retake-quiz-btn" class="btn btn-primary" onclick="location.reload()">إعادة الاختبار</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="contact-container">
+            <div class="container">
+                <h2>تواصل معنا</h2>
+                <p class="intro-text">يسعدنا تلقي استفساراتكم وملاحظاتكم. لا تترددوا في التواصل معنا عبر النموذج التالي:</p>
+
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">الموضوع:</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">رسالتك:</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+                </form>
+
+                <div class="contact-info">
+                    <h3>معلومات اتصال إضافية:</h3>
+                    <p><img src="image.png-d52803ca-b194-41c5-a0b8-49ab2992df51" alt="البريد الإلكتروني" class="icon-img"> البريد الإلكتروني: <a href="mailto:info@eman-zahran-grammar.com">info@eman-zahran-grammar.com</a></p>
+                    <!-- يمكنك إضافة روابط لوسائل التواصل الاجتماعي هنا -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 إتقان الإنجليزية مع إيمان زهران. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const questions = [
+                {
+                    question: "My brother usually _________ football on Fridays.",
+                    options: ["a) play", "b) plays", "c) played", "d) playing"],
+                    correctAnswer: "b) plays"
+                },
+                {
+                    question: "Look! The children _________ in the garden right now.",
+                    options: ["a) play", "b) are playing", "c) played", "d) have played"],
+                    correctAnswer: "b) are playing"
+                },
+                {
+                    question: "I _________ my keys. I can't find them anywhere.",
+                    options: ["a) lost", "b) have lost", "c) am losing", "d) lose"],
+                    correctAnswer: "b) have lost"
+                },
+                {
+                    question: "She _________ for two hours, so she is very tired.",
+                    options: ["a) studies", "b) studied", "c) has been studying", "d) was studying"],
+                    correctAnswer: "c) has been studying"
+                },
+                {
+                    question: "Yesterday, we _________ to the beach.",
+                    options: ["a) go", "b) went", "c) going", "d) gone"],
+                    correctAnswer: "b) went"
+                },
+                {
+                    question: "While I _________ dinner, my phone _________ .",
+                    options: ["a) was cooking, rang", "b) cooked, was ringing", "c) am cooking, rings", "d) have cooked, has rung"],
+                    correctAnswer: "a) was cooking, rang"
+                },
+                {
+                    question: "By the time he arrived, the guests _________ .",
+                    options: ["a) left", "b) had left", "c) were leaving", "d) leave"],
+                    correctAnswer: "b) had left"
+                },
+                {
+                    question: "They _________ all night, that's why they are exhausted now.",
+                    options: ["a) worked", "b) had been working", "c) are working", "d) have worked"],
+                    correctAnswer: "b) had been working"
+                },
+                {
+                    question: "I think it _________ tomorrow.",
+                    options: ["a) rain", "b) will rain", "c) is raining", "d) rained"],
+                    correctAnswer: "b) will rain"
+                },
+                {
+                    question: "We _________ to visit our grandparents next weekend.",
+                    options: ["a) will go", "b) go", "c) are going", "d) went"],
+                    correctAnswer: "c) are going"
+                },
+                {
+                    question: "At 7 PM tomorrow, I _________ my favorite TV show.",
+                    options: ["a) watch", "b) will watch", "c) will be watching", "d) am watching"],
+                    correctAnswer: "c) will be watching"
+                },
+                {
+                    question: "By next month, I _________ my driving license.",
+                    options: ["a) get", "b) will get", "c) will have got", "d) am getting"],
+                    correctAnswer: "c) will have got"
+                },
+                {
+                    question: "The letter _________ by the postman every morning.",
+                    options: ["a) delivers", "b) is delivered", "c) delivered", "d) was delivered"],
+                    correctAnswer: "b) is delivered"
+                },
+                {
+                    question: "This house _________ in 1990.",
+                    options: ["a) built", "b) is built", "c) was built", "d) has been built"],
+                    correctAnswer: "c) was built"
+                },
+                {
+                    question: "The problem _________ by the committee next week.",
+                    options: ["a) will solve", "b) is solved", "c) will be solved", "d) solved"],
+                    correctAnswer: "c) will be solved"
+                },
+                {
+                    question: "She wants _________ a new language.",
+                    options: ["a) learning", "b) to learn", "c) learn", "d) learns"],
+                    correctAnswer: "b) to learn"
+                },
+                {
+                    question: "He stopped _________ when he moved to a healthier lifestyle.",
+                    options: ["a) to smoke", "b) smoke", "c) smoking", "d) smoked"],
+                    correctAnswer: "c) smoking"
+                },
+                {
+                    question: "My sister is _________ than me.",
+                    options: ["a) more tall", "b) taller", "c) tallest", "d) as tall"],
+                    correctAnswer: "b) taller"
+                },
+                {
+                    question: "This is _________ book I've ever read.",
+                    options: ["a) interesting", "b) more interesting", "c) most interesting", "d) the most interesting"],
+                    correctAnswer: "d) the most interesting"
+                },
+                {
+                    question: "He is not _________ as his brother.",
+                    options: ["a) older", "b) as old", "c) oldest", "d) as older"],
+                    correctAnswer: "b) as old"
+                },
+                {
+                    question: "I need to _________ my computer repaired.",
+                    options: ["a) do", "b) make", "c) have", "d) get to"],
+                    correctAnswer: "c) have"
+                },
+                {
+                    question: "We _________ live in a small village, but now we live in a big city.",
+                    options: ["a) are used to", "b) used to", "c) get used to", "d) use to"],
+                    correctAnswer: "b) used to"
+                },
+                {
+                    question: "I'm not _________ cold weather.",
+                    options: ["a) used to", "b) use to", "c) used to having", "d) used to have"],
+                    correctAnswer: "a) used to"
+                },
+                {
+                    question: "If you _________ water to 0°C, it _________ .",
+                    options: ["a) heat, melts", "b) heat, will melt", "c) heated, would melt", "d) heat, melts"],
+                    correctAnswer: "d) heat, melts"
+                },
+                {
+                    question: "If I _________ a car, I _________ to work every day.",
+                    options: ["a) have, would drive", "b) had, would drive", "c) had, drove", "d) have, drive"],
+                    correctAnswer: "b) had, would drive"
+                },
+                {
+                    question: "If she _________ for the exam, she _________ it.",
+                    options: ["a) had studied, would have passed", "b) studied, would pass", "c) studies, will pass", "d) had studied, would pass"],
+                    correctAnswer: "a) had studied, would have passed"
+                },
+                {
+                    question: "He said that he _________ tired.",
+                    options: ["a) is", "b) was", "c) will be", "d) has been"],
+                    correctAnswer: "b) was"
+                },
+                {
+                    question: "She asked me where I _________ .",
+                    options: ["a) live", "b) lived", "c) am living", "d) will live"],
+                    correctAnswer: "b) lived"
+                },
+                {
+                    question: "They told us _________ quiet.",
+                    options: ["a) be", "b) to be", "c) being", "d) not to be"],
+                    correctAnswer: "b) to be"
+                },
+                {
+                    question: "It is believed that he _________ a genius.",
+                    options: ["a) is", "b) was", "c) has been", "d) had been"],
+                    correctAnswer: "a) is" // Assuming present belief about present state
+                },
+                {
+                    question: "He is said _________ in several countries.",
+                    options: ["a) lives", "b) to live", "c) to have lived", "d) living"],
+                    correctAnswer: "c) to have lived" // Assuming past action, current belief
+                },
+                {
+                    question: "Perhaps he _________ late.",
+                    options: ["a) will be", "b) must be", "c) might be", "d) should be"],
+                    correctAnswer: "c) might be"
+                },
+                {
+                    question: "You _________ smoke in here; it's strictly forbidden.",
+                    options: ["a) don't have to", "b) mustn't", "c) couldn't", "d) needn't"],
+                    correctAnswer: "b) mustn't"
+                },
+                {
+                    question: "He started working here ten years ago.",
+                    options: ["a) He still works here.", "b) He has been working here for ten years.", "c) He is still working here.", "d) All of the above."],
+                    correctAnswer: "b) He has been working here for ten years."
+                },
+                {
+                    question: "The police arrested the suspect, and then they questioned him.",
+                    options: ["a) After the police had arrested the suspect, they questioned him.", "b) Before the police questioned the suspect, they arrested him.", "c) The police questioned the suspect after they arrested him.", "d) The police had questioned the suspect after they arrested him."],
+                    correctAnswer: "a) After the police had arrested the suspect, they questioned him."
+                },
+                {
+                    question: "I wish I _________ more free time. (Now, I don't have enough)",
+                    options: ["a) had", "b) have", "c) will have", "d) had had"],
+                    correctAnswer: "a) had"
+                },
+                {
+                    question: "She regrets not telling him the truth.",
+                    options: ["a) She wishes she had told him the truth.", "b) She wishes she hadn't told him the truth.", "c) She wishes she would tell him the truth.", "d) She wishes she tells him the truth."],
+                    correctAnswer: "a) She wishes she had told him the truth."
+                },
+                {
+                    question: "The person _________ stole the car was caught.",
+                    options: ["a) which", "b) where", "c) who", "d) whose"],
+                    correctAnswer: "c) who"
+                },
+                {
+                    question: "This is the restaurant _________ we had our first date.",
+                    options: ["a) which", "b) when", "c) that", "d) where"],
+                    correctAnswer: "d) where"
+                },
+                {
+                    question: "Could you tell me _________ the train departs?",
+                    options: ["a) what time does", "b) what time", "c) what time is", "d) what time the train"],
+                    correctAnswer: "d) what time the train"
+                }
+            ];
+
+            const quizArea = document.getElementById('quiz-area');
+            const questionCounter = document.getElementById('question-counter');
+            const currentQuestionNumberSpan = document.getElementById('current-question-number');
+            const totalQuestionsSpan = document.getElementById('total-questions');
+            const questionText = document.getElementById('question-text');
+            const optionsContainer = document.getElementById('options-container');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const submitBtn = document.getElementById('submit-btn');
+            const resultsArea = document.getElementById('results-area');
+            const scoreSpan = document.getElementById('score');
+            const maxScoreSpan = document.getElementById('max-score');
+            const percentageSpan = document.getElementById('percentage');
+            const answersReview = document.getElementById('answers-review');
+
+            let currentQuestionIndex = 0;
+            let userAnswers = new Array(questions.length).fill(null); // To store user's selected option
+
+            totalQuestionsSpan.textContent = questions.length;
+
+            function loadQuestion() {
+                const questionData = questions[currentQuestionIndex];
+                currentQuestionNumberSpan.textContent = currentQuestionIndex + 1;
+                questionText.textContent = questionData.question;
+                optionsContainer.innerHTML = ''; // Clear previous options
+
+                questionData.options.forEach((option, index) => {
+                    const optionId = `q${currentQuestionIndex}-option${index}`;
+                    const label = document.createElement('label');
+                    label.className = 'option-label';
+                    label.htmlFor = optionId;
+                    label.innerHTML = `<input type="radio" id="${optionId}" name="question-${currentQuestionIndex}" value="${option}"> ${option}`;
+                    
+                    // If user has already answered, pre-select it
+                    if (userAnswers[currentQuestionIndex] === option) {
+                        label.classList.add('selected');
+                        label.querySelector('input').checked = true;
+                    }
+
+                    // Add click listener to update selection styling
+                    label.addEventListener('click', () => {
+                        // Remove 'selected' from all options for this question
+                        optionsContainer.querySelectorAll('.option-label').forEach(lbl => {
+                            lbl.classList.remove('selected');
+                        });
+                        // Add 'selected' to the clicked option
+                        label.classList.add('selected');
+                        userAnswers[currentQuestionIndex] = option; // Store the selected answer
+                    });
+
+                    optionsContainer.appendChild(label);
+                });
+
+                updateNavigationButtons();
+            }
+
+            function updateNavigationButtons() {
+                prevBtn.style.display = currentQuestionIndex > 0 ? 'inline-block' : 'none';
+                
+                if (currentQuestionIndex === questions.length - 1) {
+                    nextBtn.style.display = 'none';
+                    submitBtn.style.display = 'inline-block';
+                } else {
+                    nextBtn.style.display = 'inline-block';
+                    submitBtn.style.display = 'none';
+                }
+            }
+
+            function showResults() {
+                quizArea.style.display = 'none';
+                resultsArea.style.display = 'block';
+
+                let score = 0;
+                answersReview.innerHTML = ''; // Clear previous review
+
+                questions.forEach((qData, index) => {
+                    const userAnswer = userAnswers[index];
+                    const isCorrect = userAnswer === qData.correctAnswer;
+                    
+                    if (isCorrect) {
+                        score++;
+                    }
+
+                    const reviewItem = document.createElement('div');
+                    reviewItem.className = 'question-review';
+                    
+                    const questionP = document.createElement('p');
+                    questionP.textContent = `السؤال ${index + 1}: ${qData.question}`;
+                    reviewItem.appendChild(questionP);
+
+                    const optionsList = document.createElement('ul');
+                    qData.options.forEach(option => {
+                        const optionLi = document.createElement('li');
+                        optionLi.textContent = option;
+
+                        if (option === userAnswer && !isCorrect) {
+                            optionLi.classList.add('incorrect-answer');
+                            optionLi.innerHTML += ' (إجابتك خاطئة)';
+                        } else if (option === qData.correctAnswer) {
+                            optionLi.classList.add('correct-answer');
+                            optionLi.innerHTML += ' (الإجابة الصحيحة)';
+                        } else {
+                             optionLi.classList.add('option'); // General style
+                        }
+                        optionsList.appendChild(optionLi);
+                    });
+                    reviewItem.appendChild(optionsList);
+                    answersReview.appendChild(reviewItem);
+                });
+
+                scoreSpan.textContent = score;
+                maxScoreSpan.textContent = questions.length;
+                const percentage = (score / questions.length) * 100;
+                percentageSpan.textContent = percentage.toFixed(2);
+
+                // You can add different messages based on percentage here
+            }
+
+            // Event Listeners
+            nextBtn.addEventListener('click', () => {
+                // Ensure an option is selected before moving next (optional, depends on desired behavior)
+                // const selectedOption = optionsContainer.querySelector(`input[name="question-${currentQuestionIndex}"]:checked`);
+                // if (!selectedOption && currentQuestionIndex < questions.length -1) {
+                //     alert('الرجاء اختيار إجابة قبل الانتقال للسؤال التالي.');
+                //     return;
+                // }
+
+                if (currentQuestionIndex < questions.length - 1) {
+                    currentQuestionIndex++;
+                    loadQuestion();
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentQuestionIndex > 0) {
+                    currentQuestionIndex--;
+                    loadQuestion();
+                }
+            });
+
+            submitBtn.addEventListener('click', showResults);
+
+            // Initial load
+            loadQuestion();
+        });
+    </script>
+</body>
+</html>
